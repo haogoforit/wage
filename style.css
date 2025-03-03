@@ -1,0 +1,158 @@
+/* 通用样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 0;
+    font-size: 14px;
+}
+
+h1, h2 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+#app {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* 配置区域 */
+#config {
+    margin-bottom: 20px;
+}
+
+#config label {
+    display: block;
+    margin-top: 10px;
+}
+
+#config input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-top: 5px;
+}
+
+#config button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#config button:hover {
+    background-color: #218838;
+}
+
+/* 表单区域 */
+#form {
+    margin-bottom: 20px;
+}
+
+#form label {
+    display: block;
+    margin-top: 10px;
+}
+
+#form input, #form select {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-top: 5px;
+}
+
+#form button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#form button:hover {
+    background-color: #0056b3;
+}
+
+/* 记录列表和汇总表格 */
+#records, #summary {
+    margin-bottom: 20px;
+    overflow-x: auto; /* 允许横向滚动 */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* 操作按钮 */
+button {
+    padding: 5px 10px;
+    margin: 2px;
+    font-size: 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c82333;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    #form input, #form select, #config input {
+        padding: 6px;
+    }
+
+    #form button, #config button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 6px;
+        font-size: 10px;
+    }
+
+    button {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计件工资登记系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>计件工资登记系统</h1>
+    <div id="app">
+        <!-- 配置区域 -->
+        <div id="config">
+            <h2>配置</h2>
+            <label for="configStyleNumber">款号:</label>
+            <input type="text" id="configStyleNumber" placeholder="输入款号">
+            <button onclick="addStyleNumber()">添加款号</button>
+
+            <label for="configProcess">工序名称:</label>
+            <input type="text" id="configProcess" placeholder="输入工序名称">
+            <button onclick="addProcess()">添加工序</button>
+        </div>
+
+        <!-- 表单区域 -->
+        <div id="form">
+            <h2>登记</h2>
+            <label for="date">日期:</label>
+            <input type="date" id="date" value="<?php echo date('Y-m-d'); ?>">
+
+            <label for="employee">员工姓名:</label>
+            <input type="text" id="employee" placeholder="输入员工姓名">
+            
+            <label for="styleNumber">款号:</label>
+            <select id="styleNumber">
+                <!-- 款号动态加载 -->
+            </select>
+            
+            <label for="process">工序名称:</label>
+            <select id="process">
+                <!-- 工序动态加载 -->
+            </select>
+            
+            <label for="price">工序单价:</label>
+            <input type="number" id="price" placeholder="输入工序单价">
+            
+            <label for="quantity">件数:</label>
+            <input type="number" id="quantity" placeholder="输入件数">
+            
+            <button onclick="addRecord()">添加记录</button>
+        </div>
+        
+        <!-- 记录列表 -->
+        <div id="records">
+            <h2>记录列表</h2>
+            <table id="recordTable">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>员工姓名</th>
+                        <th>款号</th>
+                        <th>工序名称</th>
+                        <th>工序单价</th>
+                        <th>件数</th>
+                        <th>总价</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 记录将动态插入到这里 -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 员工汇总 -->
+        <div id="summary">
+            <h2>员工汇总</h2>
+            <table id="summaryTable">
+                <thead>
+                    <tr>
+                        <th>员工姓名</th>
+                        <th>总金额</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 汇总将动态插入到这里 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
